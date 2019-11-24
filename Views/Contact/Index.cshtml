@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "Contact Form";
+    ViewBag.PageClass = "contact-page";
+}
+
+<div class="heading">
+    <div class="heading-section">
+        <h1>Contact Us</h1>
+        <p class="tagline">Please fill out the form below with your contact information.</p>
+    </div>
+</div>
+<div class="page-content">
+    <div class="content-section">
+        <div class="brief has-animation">
+            @if(ViewBag.Errors != null)
+            {
+                <div class="server-error">@ViewBag.Errors</div>
+            }
+            <form id="contact-form" method="POST" action="/Contact" class="animated bottom-to-top">
+                <div class="input-container">
+                    <div class="error">Please enter 1-40 characters for your first name.</div>
+                    <input name="FirstName" placeholder="First name (required)" type="text" minlength="1" maxlength="40" class="first-name" required />
+                </div>
+
+                <div class="input-container">
+                    <div class="error">Please enter 1-40 characters for your last name.</div>
+                    <input name="LastName" placeholder="Last name (required)" type="text" minlength="1" maxlength="40" class="last-name" required />
+                </div>
+
+                <div class="input-container">
+                    <div class="error">If you enter in a phone number, please make sure it is less than 16 characters.</div>
+                    <input name="Telephone" placeholder="Phone" type="text" minlength="1" maxlength="16" class="phone" />
+                </div>
+
+                <div class="input-container">
+                    <div class="error">Please enter a valid email with 1-40 characters.</div>
+                    <input name="EmailAddress" placeholder="Email (required)" type="email" minlength="1" maxlength="80" class="email" required />
+                </div>
+                <div class="input-container">
+                    <select name="BestTimeToCall" class="default">
+                        <option value="Best time to call" selected>Best time to call</option>
+                        <option value="9:00">9:00 AM</option>
+                        <option value="9:15">9:15 AM</option>
+                        <option value="9:30">9:30 AM</option>
+                        <option value="9:45">9:45 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="10:15">10:15 AM</option>
+                        <option value="10:30">10:30 AM</option>
+                        <option value="10:45">10:45 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="11:15">11:15 AM</option>
+                        <option value="11:30">11:30 AM</option>
+                        <option value="11:45">11:45 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="12:15">12:15 PM</option>
+                        <option value="12:30">12:30 PM</option>
+                        <option value="12:45">12:45 PM</option>
+                        <option value="13:00">1:00 PM</option>
+                        <option value="13:15">1:15 PM</option>
+                        <option value="13:30">1:30 PM</option>
+                        <option value="13:45">1:45 PM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="14:15">2:15 PM</option>
+                        <option value="14:30">2:30 PM</option>
+                        <option value="14:45">2:45 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="15:15">3:15 PM</option>
+                        <option value="15:30">3:30 PM</option>
+                        <option value="15:45">3:45 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                        <option value="16:15">4:15 PM</option>
+                        <option value="16:30">4:30 PM</option>
+                        <option value="16:45">4:45 PM</option>
+                        <option value="17:00">5:00 PM</option>
+                        <option value="17:15">5:15 PM</option>
+                        <option value="17:30">5:30 PM</option>
+                        <option value="17:45">5:45 PM</option>
+                        <option value="18:00">6:00 PM</option>
+                    </select>
+                </div>
+                <div class="captcha">
+                    <div class="error">Please try to solve the math problem again.</div>
+                    <span class="captcha-problem">5 - 3 = </span><input class="captcha-answer" type="number" /> <span class="grey-accent">(required)</span>
+                </div>
+                <input type="submit" value="Send" class="ghost-btn blue-btn" />
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

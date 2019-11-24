@@ -1,0 +1,30 @@
+﻿.contact-page .heading p {
+    color: #fff;
+}
+
+.contact-page form {
+    width: 100%;
+    top: 0;
+    left: 0;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.contact-page form select {
+    margin-bottom: 20px;
+}
+
+.contact-page .captcha-answer {
+    display: inline;
+    width: 60px;
+    margin-bottom: 0;
+}
+
+.contact-page .error {
+    margin-bottom: 5px;
+}
+
+.contact-page .server-error {
+    text-align: center;
+}

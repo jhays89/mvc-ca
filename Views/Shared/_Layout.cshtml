@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="icon" href="https://codeauthority.com/images/Just-CA-Square_250x250.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap" rel="stylesheet">
+
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body class="page @ViewBag.PageClass">
+    <div class="app-navbar-container">
+        @Html.Partial("~/Views/Shared/_Navigation.cshtml")
+    </div>
+    <div class="app-content-wrapper">
+        @RenderBody()
+        <footer>
+            @Html.Partial("~/Views/Shared/_Footer.cshtml")
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/javascript/custom")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
